@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title> Der Schimmelreiter</title>
+<link href="favicon der Schimmelreiter.ico" rel="icon" type="image/x-icon">
+<header>
+  <button id="menu-toggle">&#9776; Menu</button>
+  <nav id="main-nav">
+    <ul>
+      <li style="font-size: x-large;text-align: center;"><a href="#überdasbuch" onclick="closeMenu()">Über das Buch</a></li>
+      <li style="font-size: x-large;text-align: center;"><a href="#buchlesen" onclick="closeMenu()">Buch lesen</a></li>
+      <li style="font-size: x-large;text-align: center;"><a href="#kapitelübersicht" onclick="closeMenu()">Kapitelübersicht</a></li>
+      <li style="font-size: x-large;text-align: center;"><a href="#buchfiguren" onclick="closeMenu()">Buchfiguren</a></li>
+       </ul>
+  </nav>
+</header>
+<style>
+#main-nav {
+  display: none;
+}
+#menu-toggle {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  font-size: 1.2em;
+  background-color: #0b0b0ba5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#menu-toggle:hover {
+  background-color: #aaa6a6b8;
+}
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.927);
+  animation: fade-in 0.3s ease-in-out;
+}
+
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: slide-down 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#main-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav a {
+  display: block;
+  padding: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+#main-nav a:hover {
+  background-color: #555;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+br{
+  color:#fff;
+  font-family:Verdana;
+  font-size: larger;
+}
+h3 {
+    color: rgb(255, 255, 255);
+    font-family: verdana;
+    font-size: 150%;
+  }
+  p  {
+    color: rgb(255, 255, 255);
+    font-family: Verdana;
+    font-size: large;
+  }
+  #td01 { font-family:Verdana;
+    font-size:x-large
+
+
+  }
+  table { 
+font-family: Verdana;
+border-collapse: collapse;
+width: 100%;
+  }
+ td, th {
+border: 1px solid white;
+text-align: left;
+padding: 9px;
+color:white
+  }
+   body {
+background-image: url(https://image.ceneostatic.pl/data/products/14561507/i-tubadzin-barcelona-palazzo-1a-59-8x59-8.jpg);
+background-size: cover;
+   }
+</style>
+<script>
+var menuToggle = document.getElementById('menu-toggle');
+var mainNav = document.getElementById('main-nav');
+menuToggle.addEventListener('click', function() {
+  if (mainNav.style.display === 'none') {
+    mainNav.style.display = 'block';
+  } else {
+    mainNav.style.display = 'none';
+  }
+});
+function closeMenu() {
+  var menu = document.getElementById('menu-nav');
+  mainNav.style.display = 'none';
+}
+
+
+</script>
+</head>
+<body>
+<h3 id="überdasbuch" style="text-align: center; color:#fff;background-color: black;">Über das Buch</h3>
+<p style="text-align: left;color: #fff;font-size: large;">&bull; "Der Schimmelreiter" ist eine Novelle, der 1888 von Theodor Storm veröffentlicht wurde.
+Die Novelle beschreibt das Leben von Hauke Haien, seine Erhebung zum Deichgrafen, seine Auseinandersetzungen mit der Gesellschaft, den tragischen Tod von Haukes Familie durch eine Flutwelle und Haukes anschließenden Selbstmord.</br>
+<p style="text-align: left;">&bull;"Der Schimmelreiter" gliedert sich in einen äußeren Rahmen, einen inneren Rahmen und eine innere Geschichte. Folglich spielt die Geschichte zu drei verschiedenen Zeitpunkten und wird von drei verschiedenen Erzählern erzählt.</p>
+<p style="text-align: left;">&bull;Schimmelreiter ist in der Zeit des Realismus zwischen 1848 und 1890 angesiedelt.
+Es ist Theodor Storms Meisterwerk, das er noch kurz vor seinem Tod vollenden konnte. Die Erzählung "Schimmelreiter" spielt in Nordfriesland, in der Heimat von Theodor Storm.</p>
+<h3 id="buchlesen" style="text-align: center; color:#fff;background-color: black;"> Buch lesen </h3>
+
+<iframe src="https://www.projekt-gutenberg.org/storm/schimmel/schimmel.html" style="text-align: center;height:1300px;width:1200px;color:#75757571;background-color: #fff;"></iframe>
+<h3 id="kapitelübersicht" style="text-align:center; color:white; background-color: black;">Kapitelübersicht</h3>
+<table>
+<tr>
+<th> Kapitel</th>
+<th style="text-align:center;">Handlung</th>
+
+</tr>
+<tr>
+<td id="td01"> &#8544;</td>
+<td>Das Kapitel beginnt damit, dass sich die Erzähler an eine Geschichte erinnert, die er bei ihrer Großmutter gelesen hat, in der es um einen Reisenden geht, der Verwandte an der Nordsee besucht, einem Reiter auf einem weißen Pferd begegnet und im Meer verschwindet.</td>
+</tr>
+<tr> 
+<td id="td01">&#8545; </td>
+<td> Der Lehrer beginnt die Geschichte. Dann beginnt er die Geschichte aus Hauke Haienes Kindheit, als sie ein niederländisches Buch mit einem kleinen Wörterbuch der Mathematik von Euklid und der niederländischen Grammatik fand, das ihr Vater ihr schenkte.
+    Hauke wird von seinem Vater oft mit einem Karren auf dem Deich arbeiten gelassen. So verbringt er viel Zeit auf dem Deich und schaut auf das Meer hinaus. Hauke ist als Kind fasziniert von dem Deich, der das Dorf vor Sturmfluten schützen soll, und von der neuen Form des Deiches, die gerade entwickelt wird. Hauke erkennt, dass die alten Deiche nicht stabil genug sind, um Überschwemmungen standzuhalten und beschließt, ein Modell für die neuen Deiche zu entwerfen und eines Tages selbst Deichgraf zu werden.</td>
+</tr>
+<tr> 
+<td id="td01">
+&#8546;</td>
+<td>In einem Wutanfall tötet Hauke Haien eine Katze, weil sie keine Ratten und Vögel fängt. Die Katze war eine Angorakatze, die einer Frau gehörte, die ihren Sohn verloren hatte und nur noch eine Katze hatte. Hauke Haien bereut es nicht, die Katze getötet zu haben. Die Frau brachte die tote Katze zu Ted Haien, aber er gab ihr nur eine Münze, um sie zu bezahlen.</td>
+</tr>
+<tr> 
+<td id="td01">
+&#8547;
+</td>
+<td>Haukes Vater stellt den 18-jährigen Hauke schließlich als Kleinknecht in den Dienst des Grafen Tedde Volkerts vom Deich. Hauke zeigt dem Grafen Deich auf, wie man die Deiche verbessern kann. </td>
+</tr>
+<tr>
+<td id="td01">
+&#8548;-&#8549;
+</td>
+<td> Er ist auch geschickt in der Verwaltung und hilft Thede Volkerts beim Rechnen. Die Deicharbeiter loben Hauke, aber der Schreiber Ole Peters ist eifersüchtig auf den begeisterten Hauke. Elke, Tochter von Tede Volkerts, das ebenfalls gerne rechnet, verteidigt Hauke jedoch und bewahrt ihn vor harter Arbeit.
+</td>
+</tr>
+<tr>
+<td id="td01"> &#8550;
+</td>
+<td>Hauke und Elke finden auf Anhieb Gefallen aneinander und werden im Verlauf eines traditionellen Winterfestes bald zu engen Freunden. Währenddessen wird Ole Pieters von Elke abgewiesen und heiratet stattdessen kurz darauf Volina Harders, die Tochter des Deichgrafen. Außerdem tritt Hauke an die Stelle von Peeters, als dieser seinen Job kündig</tr>
+<tr>
+<td id="td01"> &#8551;
+</td>
+<td>Haukes Vater stirbt und hinterlässt Hauke ein kleines Vermögen. Er hofft, dass Hauke seinen Traum verwirklicht und die Nachfolge von Ted Folkert als Graf des Deiches antritt. Aber um wirklich Graf von Deich zu werden, hat Hauke nicht genug Reichtum. </td>
+</tr>
+<tr>
+<td id="td01">
+&#8552;
+</td>
+<td>Tede Volkerts stirbt, Elke will endlich Hauke heiraten, was Hauke ein ausreichendes Vermögen verschafft und ihn praktisch zum Grafen der Talsperre macht.
+</td>
+</tr>
+<tr> 
+<td id="td01"> &#8553;</td>
+<td> Als neuer Deichgraf kann Hauke Haien die Pläne für den Deichbau vorantreiben. Doch die Bauarbeiten, die Hauke und Elke eifrig vorantreiben wollen, führen gleichzeitig zu Spannungen zwischen Hauke und den Dorfbewohnern. Schuld daran ist Ole Peters, der verheiratet und wohlhabend ist und als Deichgraf arbeitet. Ole lockt streut im Dorf böse Gerüchte über ihn. In der Folge wird der sozial unbeholfene Hauke immer mehr aus der Dorfgemeinschaft entfernt.
+</td>
+</tr>
+<tr>
+<td id="td01">
+&#8554;-&#8553;&#8546;
+</td>
+<td>
+ Hauke kauft von einem Fremden einen mageren Schimmel und bringt ihn ins Dorf zurück. Die Dorfbewohner sind verängstigt und glauben, dass der Schimmel das Skelett eines Pferdes ist, das aus dem Sumpf auferstanden ist. Unter Haukes Obhut entwickelt sich der Schimmel zu einem guten Pferd und geht eine tiefe Bindung mit Hauke ein.
+</td>
+</tr>
+<tr>
+<td id="td01">
+&#8553;&#8547;
+</td>
+<td>
+ Elke bringt eine Tochter zur Welt, Wieneke. Nach der Geburt erkrankt Elke an einem postnatalen Fieber und verliert fast ihr Leben.
+</td>
+</tr>
+<tr>
+<td id="td01">
+&#8553;&#8548;-&#8553;&#8549;
+</td>
+<td> Als Wienke ein paar Jahre alt ist, wird sie als geistig behindert eingestuft und in die Obhut von Trien Jans gegeben.</td>
+</tr>
+<tr>
+<td id="td01">
+&#8553;&#8550;
+</td>
+<td> Trien, die Probleme mit Hauke hatte, aber ein gutes Verhältnis zu Elke pflegt, zieht auf den Hof von Hauke und Elke und versöhnt sich auch mit Hauke. Trotz der Probleme wird die Liebe zwischen Hauke und Elke immer stärker.  </td>
+</tr>
+<tr>
+<td id="td01">&#8553;&#8551;-&#8553;&#8552;</td>
+<td>Kurz nachdem der Deichbau abgeschlossen ist, erkrankt Hauke und schwebt in Lebensgefahr. Im Frühjahr bemerkt er den Schaden am alten Deich und möchte ihn reparieren lassen. Da er durch seine Krankheit geschwächt ist, kann er die Gemeinde nicht darum bitten, dies zu tun. Unterdessen verstärkt Ole Peters, der Deichkommissar, den Deich nur oberflächlich, sehr zum Ärger von Hauke. Auf dem Sterbebett prophezeit Trienjans, dass die Deiche brechen werden.
+</td>
+</tr>
+<tr>
+<td id="td01">&#8553;&#8553;</td>
+<td>Ein schweres Unwetter lässt die alten Deiche tatsächlich brechen und die Niederungen werden überflutet. Hauke erkennt, dass er für seine Fehlentscheidungen selbst verantwortlich ist. Große Wassermassen überfluten den alten Kuhstall und das Dorf. Haukes Familie versucht,  mit einer Kutsche fahren, aber die Flut versenkt sie und sie sterben. Als Hauke dieses Unglück mit ansehen muss, stürzt er sich mit seinem Schimmel ins Wasser und bringt sich um </td>
+</tr>
+</table>
+<h3 id="buchfiguren" style="text-align: center;color:#fff; background-color: black;">Buchfiguren</h3>
+<ul style="list-style-type:none;color: #fff;font-family: Verdana;text-align: left;">
+<br><strong>&#10022; Hauke Haien</strong>
+<li><br>&#8231;Sein geschätztes Geburtsjahr ist 1715
+<br>&#8231;Ist zu Beginn der Handlung ca. 16 Jahre alt.
+<br>&#8231;Ist schon früh von Deichen fasziniert und verbringt seine Freizeit dort.
+<br>&#8231;Hat ein ausgeprägtes mathematisches und technisches Verständnis.
+<br>&#8231;Träumt davon, Deichgraf zu werden.
+<br>&#8231;Arbeitet als Kleinknecht bei einem Deichgrafen.
+<br>&#8231;Verliebt sich in Elke, die Tochter des Deichgrafen.
+<br>&#8231;Wird mit Elkes Unterstützung zum neuen Deichgrafen.
+<br>&#8231;Ist besessen von der Arbeit am Deich.
+<br>&#8231;Ist von sich selbst überzeugt und strebt nach Anerkennung.
+<br>&#8231;Hat hohe Ansprüche, die ihn im Dorf unbeliebt machen.
+<br>&#8231;Kauft einen Schimmel, der nur von ihm geritten werden kann.
+<br>&#8231;Verliert die Unterstützung des Dorfes.
+<br>&#8231;Führt eine enge Beziehung zu Elke und zu seiner intellektuell behinderten Tochter Wienke.
+<br>&#8231;Gibt sich die Schuld am Einsturz des Deiches.
+<br>&#8231;Tötet sich selbst, indem er in die Fluten reitet.</li>
+
+<br><strong>&#10022; Elke Volkerts</strong>
+<li>
+<br>&#8231;Ist die Tochter des Deichgrafen.
+<br>&#8231;Ist sehr gläubig.
+<br>&#8231;Wächst ohne Mutter auf.
+<br>&#8231;Verliebt sich in Hauke und heiratet ihn.
+<br>&#8231;Verteidigt Hauke gegen Ole Peters.
+<br>&#8231;Unterstützt Hauke bedingungslos bei seiner Arbeit.
+<br>&#8231;Bringt Wienke zur Welt.
+<br>&#8231;Erkrankt schwer am Kindbettfieber.
+<br>&#8231;Liebt Wienke und Hauke innig.
+<br>&#8231;Holt die abergläubische alte Trien' ins Haus.
+<br>&#8231;Verstirbt mit Wienke in den Fluten.</li>
+<br><strong>&#10022; Ole Peters</strong>
+<li>
+<br>&#8231;Ist Haukes Gegenspieler.
+<br>&#8231;Ist der Sohn eines Tagelöhners.
+<br>&#8231;Arbeitet als Großknecht beim Deichgrafen.
+<br>&#8231;Ist ein fleißiger Arbeiter.
+<br>&#8231;Ist eifersüchtig auf Hauke und schikaniert ihn häufig.
+<br>&#8231;Versucht vergeblich Elke zu gewinnen, heiratet stattdessen Vollina Harders
+<br>&#8231;Übernimmt das Amt des Deichbevollmächtigter.
+<br>&#8231;Intrigiert gegen Hauke und bringt die Dorfgemeinde gegen ihn auf.
+<br>&#8231;Kann Bedürfnisse der Dorfbewohner besser verstehen als Hauke.</li>
+<br><strong>&#10022; Tede Haien</strong>
+<li>
+  <br>&#8231;Ist Haukes Vater.
+<br>&#8231;Ist alleinerziehend.
+<br>&#8231;Ist ein Kleinbauer mit wenig Vieh.
+<br>&#8231;Ist sehr intelligent.
+<br>&#8231;Stellt sein Leben für Hauke zurück, als er dessen Talent erkennt.
+<br>&#8231;Verschafft Hauke die Arbeit beim Deichgrafen und bestärkt ihn darin, Deichgraf zu werden.
+<br>&#8231;Hinterlässt ihm ein wenig Geld und Land, damit Hauke Deichgraf werden kann.</li>
+<br><strong>&#10022; Tede Volkert</strong>
+<li>
+<br>&#8231;Ist Elkes Vater.
+<br>&#8231;Ist Großbauer und Deichgraf.
+<br>&#8231;Ist ein bequemer und gutmütiger, jedoch kein intelligenter Mann.
+<br>&#8231;Ist mit seinem Amt überfordert und auf Hilfe angewiesen.
+<br>&#8231;Erkennt Haukes Begabung.
+<br>&#8231;Ist sehr traditionsgebunden und hätte die Hochzeit von Hauke und Elke zu Lebzeiten nicht unterstützt.</li>
+<br><strong>&#10022;Trien' Jans</strong>
+<li>
+<br>&#8231;Ist eine alte Frau.
+<br>&#8231;Arbeitete früher für den Deichgrafen.
+<br>&#8231;Verlor ihren Sohn bei einem Unglück auf See.
+<br>&#8231;Besitzt einen weißen Angorakater, der sie an ihren Sohn erinnert.
+<br>&#8231;Verflucht Hauke, als dieser den Kater tötet.
+<br>&#8231;Wird von Elke an den Hof der Familie Haien geholt, um Wienke zu betreuen.
+<br>&#8231;Versöhnt sich daraufhin mit Hauke.
+<br>&#8231;Stirbt im Jahr 1756.</li>
+</ul>
+</meta>
+</body>
+</html>
